@@ -1,0 +1,13 @@
+{
+    "name": "youcode/projet_mvc_postgresql",
+    "description": "projet mvc et postgreSql",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "projet_mvc_postgresql\\App\\": "App/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
