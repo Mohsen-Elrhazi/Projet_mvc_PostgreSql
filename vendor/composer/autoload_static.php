@@ -7,14 +7,22 @@ namespace Composer\Autoload;
 class ComposerStaticInitfe27814bc8ca561fa53a7607c0987368
 {
     public static $prefixLengthsPsr4 = array (
-        'p' => 
+        'D' => 
         array (
-            'projet_mvc_postgresql\\App\\' => 26,
+            'Database\\' => 9,
+        ),
+        'A' => 
+        array (
+            'App\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'projet_mvc_postgresql\\App\\' => 
+        'Database\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/config',
+        ),
+        'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/App',
         ),
