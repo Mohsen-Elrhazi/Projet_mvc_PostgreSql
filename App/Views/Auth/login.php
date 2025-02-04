@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link rel="stylesheet" href="/public/assets/css/register.css">
+    <link rel="stylesheet" href="../../../public/assets/css/auth.css">
 
 </head>
 
@@ -20,7 +20,7 @@
                 <input type="password" id="password" name="password" placeholder="Password" />
             </div>
             <button type="submit">Register</button>
-            <p>Vous n'avez pas de compte ? <a href="./../../../index.php?page=register">S'inscrire</a></p>
+            <p class="login-link">Vous n'avez pas de compte ? <a href="">S'inscrire</a></p>
         </form>
     </div>
 </body>

@@ -21,7 +21,7 @@ class UserRepositorie{
         ]);
     }
 
-    public function emailExist($email):bool {
+    public function findByEmail($email):bool {
         $stmt= $this->conn->prepare("SELECT * FROM users WHERE email = :email");
         $stmt->execute([
             ':email' => $email
