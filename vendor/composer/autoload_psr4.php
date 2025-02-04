@@ -6,5 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'projet_mvc_postgresql\\App\\' => array($baseDir . '/App'),
+    'Database\\' => array($baseDir . '/config'),
+    'App\\' => array($baseDir . '/App'),
 );
