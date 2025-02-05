@@ -3,7 +3,7 @@ namespace Config;
 
 class Database{
     private static $host="localhost";
-    private static $port="5432";
+    private static $port=5432;
     private static  $db_name="projet_mvc_db";
     private static $username="postgres";
     private static $password="";
@@ -14,8 +14,14 @@ class Database{
             return self::$conn;
             
         }else{
-            self::$conn= new \PDO("pgsql:host=".self::$host.";port=".self::$port.";dbname=".self::$db_name,self::$username,self::$password);
+            try{
+                 self::$conn= new \PDO("pgsql:host=".self::$host.";port=".self::$port.";dbname=".self::$db_name,self::$username,self::$password);
             return self::$conn;
+            
+            }catch (\PDOException $e) {
+                die("Erreur de connexion : " . $e->getMessage());
+            }
+           
         }
     }
 }

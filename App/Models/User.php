@@ -30,21 +30,4 @@ class User{
         return $this->password;
     }
 
-    // public function save(User $user):void{
-    //     $stmt= $this->conn->prepare("INSERT INTO users(name, email, password) VALUES(:nme, :email, :password)");
-    //     $stmt->execute([
-    //         ':name' => $user->getName(),
-    //         ':email' => $user->getEmail(),
-    //         ':password' => $user->getPassword()
-    //     ]);
-    // }
-
-    public function save():void{
-        $stmt= $this->conn->prepare("INSERT INTO users(name, email, password) VALUES(:nme, :email, :password)");
-        $stmt->execute([
-            ':name' => $this->name,
-            ':email' => $this->email,
-            ':password' => $this->password
-        ]);
-    }
 }
