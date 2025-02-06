@@ -13,10 +13,7 @@ class AuthController {
     }
     
     public function registerView() {
-        // require_once 'App/Views/Auth/register.php';
-        // echo "page register";
         require_once dirname(__DIR__,1).'\Views\Auth\register.php';  
-
     }
 
     public function register() {
@@ -71,27 +68,27 @@ class AuthController {
                 $_SESSION['id'] = $user['id'];
                  $_SESSION['email'] = $user['email'];
                 
-                //  header("location:/dashboard");
-                // exit;
-        die("login success");
+                 header("location:/dashboard");
+                exit;
+        // die("login success");
 
                  
             }else{
                 $_SESSION['error']= 'Mot de pass incorrect';
-           echo "Mot de pass incorrect";
+        //    echo "Mot de pass incorrect";
 
-            // header("Location:/login");
+            header("Location:/login");
             }
           }else{
            $_SESSION['error']='Aucun utilisateur trouvé avec cet email'; 
-           echo "Aucun utilisateur trouvé avec cet email";
+        //    echo "Aucun utilisateur trouvé avec cet email";
 
-        //    header("Location:/login");
+           header("Location:/login");
           }
         }else{
            $_SESSION['error']='Veuiller remplir tous les champs'; 
-           echo "Veuiller remplir tous les champs";
-        //    header("Location:/login");
+        //    echo "Veuiller remplir tous les champs";
+           header("Location:/login");
         }
     }
 }

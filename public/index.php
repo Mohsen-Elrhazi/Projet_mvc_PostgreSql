@@ -1,11 +1,13 @@
 <?php
-
+ if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+    }
+    
 // Inclure l'autoload de Composer
-require_once '../vendor/autoload.php';  // Assure-toi que ce chemin est correct
+require_once '../vendor/autoload.php';  
 
 use App\Core\Router;
 
-// Créer l'objet Router
 $router = new Router();
 
 // Récupérer la méthode HTTP et l'URL

@@ -18,7 +18,7 @@ class UserRepository{
             ':firstName' => $user->getFirstName(),
             ':lastName' => $user->getLastName(),
             ':email' => $user->getEmail(),
-            ':password' => password_hash($user->getPassword(), PASSWORD_BCRYPT) // Sécuriser le mot de passe
+            ':password' => $user->getPassword(),
         ]);
     }
 

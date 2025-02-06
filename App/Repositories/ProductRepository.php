@@ -6,21 +6,23 @@ use Config\Database;
 use InvalidArgumentException;
 use PDO;
 
-class ProductRepositorie extends BaseRepositorie{
+class ProductRepository extends BaseRepositorie{
     public function save(object $object){
         if($object instanceof Product){
-            $sql = "INSERT INTO Product(name ,image ,description ,price)VALUES(:name ,:image :description ,:price)";
+            $sql = "INSERT INTO products(name, image, description ,price, quantity)VALUES(:name,:image, :description , :price, :quantity)";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([
                 ':name' => $object->getName() ,
                 ':image' => $object->getImage() ,
                 ':description' => $object->getDescription() ,
-                ':price' => $object->getPrice()
+                ':price' => $object->getPrice(),
+                ':quantity' => $object->getQuantity()
             ]);
         }else{
             throw new InvalidArgumentException("Object passe n'est pas une instanse de product!");
         }
     }
+    
     public function edit(object $object){
         if($object instanceof Product){
             $sql = "UPDATE Product set name = :name ,image = :image ,description = :description ,price = :price";

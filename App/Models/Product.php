@@ -3,18 +3,20 @@ namespace App\Models;
 
 class Product
 {
-    private int $id;
-    private string $name;
-    private string $image;
-    private string $description;
-    private float $price;
+    private  $id;
+    private  $name;
+    private  $image;
+    private  $description;
+    private  $price;
+    private  $quantity;
 
-    public function __construct($name, $image, $description, $price, $id = null)
+    public function __construct($name, $image, $description, $price,$quantity, $id = null)
     {
         $this->name = $name;
         $this->image = $image;
         $this->description = $description;
         $this->price = $price;
+        $this->quantity = $quantity;
         $this->id = $id;
     }
 
@@ -41,6 +43,11 @@ class Product
     public function getPrice(): float
     {
         return $this->price;
+    }
+    
+    public function getQuantity(): float
+    {
+        return $this->quantity;
     }
 
     public function setName($name)

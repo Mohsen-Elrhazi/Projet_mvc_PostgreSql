@@ -38,8 +38,8 @@
 
     <main class="main-content">
         <h1>Bienvenue sur notre plateforme</h1>
-        <p>Découvrez une nouvelle façon de gérer vos projets avec notre solution intuitive et moderne. Nous vous
-            accompagnons dans chaque étape de votre réussite.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil distinctio aperiam ex culpa, error rerum nam
+            consectetur. Consequuntur blanditiis, asperiores,</p>
     </main>
 
 

@@ -6,22 +6,22 @@
     </div>
     <ul class="nav-links">
         <li>
-            <a href="index.php?page=ajouter_produit">
+            <a href="/addProduct">
                 <i class="fa-solid fa-plus"></i>
-                <span class="links_name">Add Produit</span>
+                <span class="links_name">Add Product</span>
             </a>
         </li>
         <li>
-            <a href="index.php?page=edit_produit">
+            <a href="index.php?page=edit_product">
                 <i class="fa-regular fa-pen-to-square"></i>
-                <span class="links_name">Edit Produit</span>
+                <span class="links_name">Edit Product</span>
             </a>
         </li>
         <li>
-            <a href="index.php?page=produit">
+            <a href="index.php?page=product">
                 <i class="bx bx-box"></i>
                 <!-- <i class="fa-brands fa-product-hunt"></i> -->
-                <span class="links_name">Produit</span>
+                <span class="links_name">Product</span>
             </a>
         </li>
         <li>
