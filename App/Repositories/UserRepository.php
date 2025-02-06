@@ -5,7 +5,7 @@ use App\Models\User;
 use Config\Database;
 use PDO; 
 
-class UserRepositorie{
+class UserRepository{
     private $conn;
 
     public function __construct(){
@@ -13,11 +13,12 @@ class UserRepositorie{
     }
     
     public function save(User $user):void{
-        $stmt= $this->conn->prepare("INSERT INTO users(name, email, password) VALUES(:nme, :email, :password)");
+        $stmt= $this->conn->prepare("INSERT INTO users(firstName, lastName, email, password) VALUES(:firstName, :lastName, :email, :password)");
         $stmt->execute([
-            ':name' => $user->getName(),
+            ':firstName' => $user->getFirstName(),
+            ':lastName' => $user->getLastName(),
             ':email' => $user->getEmail(),
-            ':password' => $user->getPassword()
+            ':password' => password_hash($user->getPassword(), PASSWORD_BCRYPT) // Sécuriser le mot de passe
         ]);
     }
 

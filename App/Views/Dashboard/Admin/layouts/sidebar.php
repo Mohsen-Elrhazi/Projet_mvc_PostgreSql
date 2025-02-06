@@ -8,7 +8,7 @@
         <li>
             <a href="index.php?page=ajouter_produit">
                 <i class="fa-solid fa-plus"></i>
-                <span class="links_name">Ajouter Produit</span>
+                <span class="links_name">Add Produit</span>
             </a>
         </li>
         <li>
@@ -26,24 +26,24 @@
         </li>
         <li>
             <a href="index.php?page=client">
-                <i class="bx bx-user"></i>
-                <span class="links_name">Client</span>
+                <i class="fa-solid fa-plus"></i>
+                <span class="links_name">Add Categorie</span>
             </a>
         </li>
         <li>
             <a href="index.php?page=commande">
-                <i class="bx bx-list-ul"></i>
-                <span class="links_name">Commandes</span>
+                <i class="fa-regular fa-pen-to-square"></i>
+                <span class="links_name">Edit categorie</span>
             </a>
         </li>
 
         <li>
             <a href="index.php?page=analyses">
-                <i class="bx bx-pie-chart-alt-2"></i>
-                <span class="links_name">Analyses</span>
+                <i class="fa-solid fa-list"></i>
+                <span class="links_name">Categories</span>
             </a>
         </li>
-        <li>
+        <!-- <li>
             <a href="index.php?page=stock">
                 <i class="bx bx-coin-stack"></i>
                 <span class="links_name">Stock</span>
@@ -66,7 +66,7 @@
                 <i class="bx bx-cog"></i>
                 <span class="links_name">Configuration</span>
             </a>
-        </li>
+        </li> -->
         <li class="log_out">
             <a href="index.php?page=logout">
                 <i class="bx bx-log-out"></i>

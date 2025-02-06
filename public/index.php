@@ -1,23 +1,31 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
-$dotenv->load();
-
-session_start();
+// Inclure l'autoload de Composer
+require_once '../vendor/autoload.php';  // Assure-toi que ce chemin est correct
 
 use App\Core\Router;
 
+// Créer l'objet Router
 $router = new Router();
 
-// Définir les routes avec le chemin de base
-$basePath = '/Projet_mvc_PostgreSql/public';
-$router->add('GET', $basePath . '/', 'DashboardController', 'index');
-$router->add('GET', $basePath . '/login', 'AuthController', 'showLoginForm');
-$router->add('POST', $basePath . '/login', 'AuthController', 'login');
-$router->add('GET', $basePath . '/register', 'AuthController', 'showRegisterForm');
-$router->add('POST', $basePath . '/register', 'AuthController', 'register');
-$router->add('GET', $basePath . '/dashboard/Admin', 'DashboardController', 'index');
+// Récupérer la méthode HTTP et l'URL
+$method = $_SERVER['REQUEST_METHOD']; 
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-$router->dispatch();
+// Debug pour vérifier la méthode et l'URL
+// var_dump($method, $uri);
+
+// Dispatcher la requête vers la bonne route
+$router->dispatch($method, $uri);
+
+
+
+
+// echo "page index.php";
+//  var_dump($_SERVER);
+// $uri = $_SERVER['REQUEST_URI'];
+// var_dump($uri);
+// $method = $_SERVER['REQUEST_METHOD'];
+
+// var_dump($method);
+// var_dump($_REQUEST);

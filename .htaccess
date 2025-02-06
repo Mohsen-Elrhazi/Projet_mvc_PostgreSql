@@ -1,0 +1,16 @@
+<!-- RewriteEngine On
+
+# Rediriger toutes les requêtes vers le dossier public
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/$1 [L] -->
+
+RewriteEngine On
+RewriteBase /
+
+# Si le fichier ou dossier existe, ne pas rediriger
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rediriger toutes les requêtes vers index.php dans le dossier public
+RewriteRule ^(.*)$ public/index.php [QSA,L]
+composer dump
